@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2012 for Windows Desktop
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cert", "Cert\Cert.csproj", "{CCA454E2-7061-47C0-BB52-C95DD3539699}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cert.Pdf", "Cert.Pdf\Cert.Pdf.csproj", "{E8A21810-D71C-4822-AAFE-4D675C40E04B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cert.Utilities", "Cert.Utilities\Cert.Utilities.csproj", "{8A3163B9-6BC2-455C-A380-20D4B8511C8F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cert.DataAccess", "Cert.DataAccess\Cert.DataAccess.csproj", "{BDC784CC-CF00-446F-9721-0C99234A6E51}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cert.Document", "Cert.Document\Cert.Document.csproj", "{2D2BC6F9-BB82-49D9-9A97-7F6553B55532}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cert.MailMerge", "Cert.MailMerge\Cert.MailMerge.csproj", "{34E8B6AD-A44F-40D9-A25C-6CAF7C12C6EB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CCA454E2-7061-47C0-BB52-C95DD3539699}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCA454E2-7061-47C0-BB52-C95DD3539699}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCA454E2-7061-47C0-BB52-C95DD3539699}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCA454E2-7061-47C0-BB52-C95DD3539699}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8A21810-D71C-4822-AAFE-4D675C40E04B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8A21810-D71C-4822-AAFE-4D675C40E04B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8A21810-D71C-4822-AAFE-4D675C40E04B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8A21810-D71C-4822-AAFE-4D675C40E04B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A3163B9-6BC2-455C-A380-20D4B8511C8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A3163B9-6BC2-455C-A380-20D4B8511C8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A3163B9-6BC2-455C-A380-20D4B8511C8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A3163B9-6BC2-455C-A380-20D4B8511C8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDC784CC-CF00-446F-9721-0C99234A6E51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDC784CC-CF00-446F-9721-0C99234A6E51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDC784CC-CF00-446F-9721-0C99234A6E51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDC784CC-CF00-446F-9721-0C99234A6E51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D2BC6F9-BB82-49D9-9A97-7F6553B55532}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D2BC6F9-BB82-49D9-9A97-7F6553B55532}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D2BC6F9-BB82-49D9-9A97-7F6553B55532}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D2BC6F9-BB82-49D9-9A97-7F6553B55532}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34E8B6AD-A44F-40D9-A25C-6CAF7C12C6EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34E8B6AD-A44F-40D9-A25C-6CAF7C12C6EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34E8B6AD-A44F-40D9-A25C-6CAF7C12C6EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34E8B6AD-A44F-40D9-A25C-6CAF7C12C6EB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
