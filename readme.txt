@@ -1,1 +1,0 @@
-Design certificates. Recognise individual contribution by creating mail-merged certificates and personalised emails to multiple recipients.
