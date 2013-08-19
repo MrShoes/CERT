@@ -1,0 +1,85 @@
+﻿<Window x:Class="DesignableCanvas.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:helpers="clr-namespace:DesignableCanvas.Helpers"
+        Title="MainWindow" Height="350" Width="525">
+    <Canvas>
+        <Canvas.Resources>
+            <ContextMenu x:Key="CustomContextMenu">
+                <MenuItem Header="Hello" />
+            </ContextMenu>
+
+            <ControlTemplate x:Key="MoveThumbTemplate" TargetType="{x:Type helpers:MoveThumb}">
+                <Rectangle Fill="Transparent"/>
+            </ControlTemplate>
+
+            <ControlTemplate x:Key="ResizeDecoratorTemplate" TargetType="Control">
+                <Grid>
+                    <helpers:ResizeThumb Height="3" Cursor="SizeNS" Margin="0 -4 0 0"
+           VerticalAlignment="Top" HorizontalAlignment="Stretch"/>
+                    <helpers:ResizeThumb Width="3" Cursor="SizeWE" Margin="-4 0 0 0"
+           VerticalAlignment="Stretch" HorizontalAlignment="Left"/>
+                    <helpers:ResizeThumb Width="3" Cursor="SizeWE" Margin="0 0 -4 0"
+           VerticalAlignment="Stretch" HorizontalAlignment="Right"/>
+                    <helpers:ResizeThumb Height="3" Cursor="SizeNS" Margin="0 0 0 -4"
+           VerticalAlignment="Bottom"  HorizontalAlignment="Stretch"/>
+                    <helpers:ResizeThumb Width="7" Height="7" Cursor="SizeNWSE" Margin="-6 -6 0 0"
+           VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                    <helpers:ResizeThumb Width="7" Height="7" Cursor="SizeNESW" Margin="0 -6 -6 0"
+           VerticalAlignment="Top" HorizontalAlignment="Right"/>
+                    <helpers:ResizeThumb Width="7" Height="7" Cursor="SizeNESW" Margin="-6 0 0 -6"
+           VerticalAlignment="Bottom" HorizontalAlignment="Left"/>
+                    <helpers:ResizeThumb Width="7" Height="7" Cursor="SizeNWSE" Margin="0 0 -6 -6"
+           VerticalAlignment="Bottom" HorizontalAlignment="Right"/>
+                </Grid>
+            </ControlTemplate>
+
+            <ControlTemplate x:Key="DesignerItemTemplate" TargetType="ContentControl">
+                <Grid DataContext="{Binding RelativeSource={RelativeSource TemplatedParent}}" ContextMenu="{StaticResource CustomContextMenu}">
+                    <helpers:MoveThumb DataContext="{Binding RelativeSource={RelativeSource TemplatedParent}}" Cursor="SizeAll" Template="{StaticResource MoveThumbTemplate}"/>
+                    <Control Template="{StaticResource ResizeDecoratorTemplate}"/>
+                    <Control Template="{DynamicResource RotateDecoratorTemplate}"/>
+                    <ContentPresenter Content="{TemplateBinding ContentControl.Content}" IsHitTestVisible="False" />
+                </Grid>
+            </ControlTemplate>
+            
+            <ControlTemplate x:Key="RotateThumbTemplate" TargetType="{x:Type helpers:RotateThumb}">
+                <Grid Width="30" Height="30">
+                    <Path Fill="#AAD0D0DD" Stretch="Fill" Data="M 50,100 A 50,50 0 1 1 100,50 H 50 V 100"/>
+                </Grid>
+            </ControlTemplate>
+            
+            <ControlTemplate x:Key="RotateDecoratorTemplate" TargetType="{x:Type Control}">
+                <Grid>
+                    <helpers:RotateThumb Margin="-18,-18,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                    <helpers:RotateThumb Margin="0,-18,-18,0" VerticalAlignment="Top" HorizontalAlignment="Right">
+                        <helpers:RotateThumb.RenderTransform>
+                            <RotateTransform Angle="90" />
+                        </helpers:RotateThumb.RenderTransform>
+                    </helpers:RotateThumb>
+                    <helpers:RotateThumb Margin="0,0,-18,-18" VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <helpers:RotateThumb.RenderTransform>
+                            <RotateTransform Angle="180" />
+                        </helpers:RotateThumb.RenderTransform>
+                    </helpers:RotateThumb>
+                    <helpers:RotateThumb Margin="-18,0,0,-18" VerticalAlignment="Bottom" HorizontalAlignment="Left">
+                        <helpers:RotateThumb.RenderTransform>
+                            <RotateTransform Angle="270" />
+                        </helpers:RotateThumb.RenderTransform>
+                    </helpers:RotateThumb>
+                </Grid>
+            </ControlTemplate>
+        </Canvas.Resources>
+
+        <ContentControl Template="{StaticResource DesignerItemTemplate}"
+                        Height="100"
+                        Width="100"
+                        Canvas.Left="10"
+                        Canvas.Top="10">
+            <Grid>
+                <Ellipse Fill="Blue"/>
+            </Grid>
+        </ContentControl>
+
+    </Canvas>
+</Window>

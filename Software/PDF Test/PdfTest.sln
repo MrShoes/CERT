@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual C# Express 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PdfTest", "PdfTest\PdfTest.csproj", "{C70AF768-2FF4-4DC0-A501-075E61650D99}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestCanvasToImage", "TestCanvasToImage\TestCanvasToImage.csproj", "{1F0C3ACA-318A-481D-A9B0-36489BF94195}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignableCanvas", "DesignableCanvas\DesignableCanvas.csproj", "{17E6C141-5A4C-48B1-A3CD-03763745B00C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImportFromExcel", "ImportFromExcel\ImportFromExcel.csproj", "{AF0C60F9-B9F0-4758-88B2-13AE1F461E60}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C70AF768-2FF4-4DC0-A501-075E61650D99}.Debug|x86.ActiveCfg = Debug|x86
+		{C70AF768-2FF4-4DC0-A501-075E61650D99}.Debug|x86.Build.0 = Debug|x86
+		{C70AF768-2FF4-4DC0-A501-075E61650D99}.Release|x86.ActiveCfg = Release|x86
+		{C70AF768-2FF4-4DC0-A501-075E61650D99}.Release|x86.Build.0 = Release|x86
+		{1F0C3ACA-318A-481D-A9B0-36489BF94195}.Debug|x86.ActiveCfg = Debug|x86
+		{1F0C3ACA-318A-481D-A9B0-36489BF94195}.Debug|x86.Build.0 = Debug|x86
+		{1F0C3ACA-318A-481D-A9B0-36489BF94195}.Release|x86.ActiveCfg = Release|x86
+		{1F0C3ACA-318A-481D-A9B0-36489BF94195}.Release|x86.Build.0 = Release|x86
+		{17E6C141-5A4C-48B1-A3CD-03763745B00C}.Debug|x86.ActiveCfg = Debug|x86
+		{17E6C141-5A4C-48B1-A3CD-03763745B00C}.Debug|x86.Build.0 = Debug|x86
+		{17E6C141-5A4C-48B1-A3CD-03763745B00C}.Release|x86.ActiveCfg = Release|x86
+		{17E6C141-5A4C-48B1-A3CD-03763745B00C}.Release|x86.Build.0 = Release|x86
+		{AF0C60F9-B9F0-4758-88B2-13AE1F461E60}.Debug|x86.ActiveCfg = Debug|x86
+		{AF0C60F9-B9F0-4758-88B2-13AE1F461E60}.Debug|x86.Build.0 = Debug|x86
+		{AF0C60F9-B9F0-4758-88B2-13AE1F461E60}.Release|x86.ActiveCfg = Release|x86
+		{AF0C60F9-B9F0-4758-88B2-13AE1F461E60}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
