@@ -21,7 +21,7 @@ namespace Cert.Pdf.ImageToPdfConverter
         /// <summary>
         /// Gets or sets the page size to convert to.
         /// </summary>
-        PageSize PageSize { get; set; }
+        iTextSharp.text.Rectangle PageSize { get; set; }
 
         /// <summary>
         /// Converts the selected <see cref="Image"/> to a PDF document.
@@ -36,7 +36,7 @@ namespace Cert.Pdf.ImageToPdfConverter
         /// <param name="image">The <see cref="Image"/> to convert.</param>
         /// <param name="pageSize">The page size to convert to.</param>
         /// <returns><c>true</c> if converted successfully; otherwise, <c>false</c>.</returns>
-        bool ConvertImageToPdf(System.Drawing.Image image, PageSize pageSize);
+        bool ConvertImageToPdf(System.Drawing.Image image, iTextSharp.text.Rectangle pageSize);
 
         /// <summary>
         /// Converts an image at the selected file path to a PDF document.
@@ -51,6 +51,6 @@ namespace Cert.Pdf.ImageToPdfConverter
         /// <param name="imagePath">The file path of he image to convert.</param>
         /// <param name="pageSize">The page size to convert to.</param>
         /// <returns><c>true</c> if converted successfully; otherwise, <c>false</c>.</returns>
-        bool ConvertImageToPdf(string imagePath, PageSize pageSize);
+        bool ConvertImageToPdf(string imagePath, iTextSharp.text.Rectangle pageSize);
     }
 }

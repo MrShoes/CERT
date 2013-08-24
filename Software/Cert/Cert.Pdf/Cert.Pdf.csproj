@@ -44,7 +44,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ImageToPdfConverter\IPdfConverter.cs" />
+    <Compile Include="ImageToPdfConverter\PdfConverter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Cert.Utilities\Cert.Utilities.csproj">
+      <Project>{8a3163b9-6bc2-455c-a380-20d4b8511c8f}</Project>
+      <Name>Cert.Utilities</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
