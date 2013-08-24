@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cert.Document", "Cert.Docum
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cert.MailMerge", "Cert.MailMerge\Cert.MailMerge.csproj", "{34E8B6AD-A44F-40D9-A25C-6CAF7C12C6EB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cert.ConsoleTestBench", "Cert.ConsoleTestBench\Cert.ConsoleTestBench.csproj", "{2C616DB3-CA1B-4571-8FE8-9FF702FC2CB3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,10 @@ Global
 		{34E8B6AD-A44F-40D9-A25C-6CAF7C12C6EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{34E8B6AD-A44F-40D9-A25C-6CAF7C12C6EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{34E8B6AD-A44F-40D9-A25C-6CAF7C12C6EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C616DB3-CA1B-4571-8FE8-9FF702FC2CB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C616DB3-CA1B-4571-8FE8-9FF702FC2CB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C616DB3-CA1B-4571-8FE8-9FF702FC2CB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C616DB3-CA1B-4571-8FE8-9FF702FC2CB3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

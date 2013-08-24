@@ -35,7 +35,7 @@ namespace Cert.Pdf.ImageToPdfConverter
                 ConvertToPdf(image);
                 return true;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 return false;
             }
@@ -49,7 +49,7 @@ namespace Cert.Pdf.ImageToPdfConverter
                 ConvertToPdf(image);
                 return true;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 return false;
             }
@@ -63,7 +63,7 @@ namespace Cert.Pdf.ImageToPdfConverter
                 ConvertToPdf(image);
                 return true;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 return false;
             }
@@ -78,7 +78,7 @@ namespace Cert.Pdf.ImageToPdfConverter
                 ConvertToPdf(image);
                 return true;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 return false;
             }
@@ -95,8 +95,10 @@ namespace Cert.Pdf.ImageToPdfConverter
                     var imageByteConverter = new ImageByteConverter();
                     var bytes = imageByteConverter.ImageToByteArray(image);
                     var pdfImage = iTextSharp.text.Image.GetInstance(bytes);
-                    pdfImage.ScaleToFit(PageSize);
+                    pdfImage.ScaleToFit(document.PageSize.Width, document.PageSize.Height);
+                    document.Open();
                     document.Add(pdfImage);
+                    document.Close();
                 }
             }
         }
