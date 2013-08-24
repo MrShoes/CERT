@@ -30,26 +30,63 @@ namespace Cert.Pdf.ImageToPdfConverter
 
         public bool ConvertImageToPdf(System.Drawing.Image image)
         {
-            throw new NotImplementedException();
+            try
+            {
+                ConvertToPdf(image);
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
 
         public bool ConvertImageToPdf(System.Drawing.Image image, iTextSharp.text.Rectangle pageSize)
         {
-            throw new NotImplementedException();
+            PageSize = pageSize;
+            try
+            {
+                ConvertToPdf(image);
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
 
         public bool ConvertImageToPdf(string imagePath)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var image = GetImageFromPath(imagePath);
+                ConvertToPdf(image);
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
 
         public bool ConvertImageToPdf(string imagePath, iTextSharp.text.Rectangle pageSize)
         {
-            throw new NotImplementedException();
+            PageSize = pageSize;
+            try
+            {
+                var image = GetImageFromPath(imagePath);
+                ConvertToPdf(image);
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
 
-        private async void ConvertImageToPdf(System.Drawing.Image image)
+        private void ConvertToPdf(System.Drawing.Image image)
         {
+            // TODO: Exception handling.
             using (var fileStream = new FileStream(FilePath, FileMode.OpenOrCreate))
             {
                 using (var document = new iTextSharp.text.Document(PageSize))
@@ -58,8 +95,17 @@ namespace Cert.Pdf.ImageToPdfConverter
                     var imageByteConverter = new ImageByteConverter();
                     var bytes = imageByteConverter.ImageToByteArray(image);
                     var pdfImage = iTextSharp.text.Image.GetInstance(bytes);
+                    pdfImage.ScaleToFit(PageSize);
+                    document.Add(pdfImage);
                 }
             }
+        }
+
+        private System.Drawing.Image GetImageFromPath(string path)
+        {
+            if(!File.Exists(path))
+                throw new FileNotFoundException(String.Format("The file {0} couldn't be found.", path));
+            return System.Drawing.Image.FromFile(path);
         }
     }
 }
