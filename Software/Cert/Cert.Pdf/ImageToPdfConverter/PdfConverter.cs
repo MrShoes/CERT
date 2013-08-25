@@ -84,6 +84,10 @@ namespace Cert.Pdf.ImageToPdfConverter
             }
         }
 
+        /// <summary>
+        /// Converts the specified image to a PDF
+        /// </summary>
+        /// <param name="image"></param>
         private void ConvertToPdf(System.Drawing.Image image)
         {
             // TODO: Exception handling.
@@ -103,6 +107,11 @@ namespace Cert.Pdf.ImageToPdfConverter
             }
         }
 
+        /// <summary>
+        /// Gets an image from a file at a specified path.
+        /// </summary>
+        /// <param name="path">The path to the image file.</param>
+        /// <returns>An image.</returns>
         private System.Drawing.Image GetImageFromPath(string path)
         {
             if(!File.Exists(path))
