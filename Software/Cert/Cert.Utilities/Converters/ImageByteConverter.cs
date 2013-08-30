@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Drawing.Imaging;
 
 namespace Cert.Utilities.Converters
 {
@@ -20,9 +21,11 @@ namespace Cert.Utilities.Converters
         /// <returns>The bytes from the image.</returns>
         public byte[] ImageToByteArray(Image imageIn)
         {
-            MemoryStream ms = new MemoryStream();
-            imageIn.Save(ms, System.Drawing.Imaging.ImageFormat.Gif);
-            return ms.ToArray();
+            using (var ms = new MemoryStream())
+            {
+                imageIn.Save(ms, ImageFormat.Gif);
+                return ms.ToArray();
+            }
         }
 
         /// <summary>
@@ -32,9 +35,10 @@ namespace Cert.Utilities.Converters
         /// <returns>An image from the bytes.</returns>
         public Image ByteArrayToImage(byte[] byteArrayIn)
         {
-            MemoryStream ms = new MemoryStream(byteArrayIn);
-            Image returnImage = Image.FromStream(ms);
-            return returnImage;
+            using (var ms = new MemoryStream(byteArrayIn))
+            {
+                return Image.FromStream(ms);
+            }
         }
     }
 }
