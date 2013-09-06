@@ -13,10 +13,22 @@ namespace Cert.Data.MailMergeData
 
         public IEnumerable<string> FieldNames
         {
-            get {
-                foreach (DataColumn column in Data.Columns)
-                    yield return column.ColumnName;
+            get
+            {
+                if (Data != null)
+                    foreach (DataColumn column in Data.Columns)
+                        yield return column.ColumnName;
             }
+        }
+
+        public MailMergeData()
+        {
+
+        }
+
+        public MailMergeData(System.Data.DataTable data)
+        {
+            Data = data;
         }
     }
 }
